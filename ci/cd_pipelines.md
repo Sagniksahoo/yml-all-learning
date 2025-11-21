@@ -39,3 +39,16 @@ Benifits of yml:
 5. More powerfull when representing complex data.
 6. Use variable tools with it.
 
+In ymal you can store in key value pairs. In Block pairs. In List pairs
+
+
+Key -> Value
+
+
+**Practice::**
+Link: https://www.yamllint.com/
+
+
+In Ymal to reconize different types of documents we need to use --- 
+
+In ymal to reconize the end of a documents we use ...

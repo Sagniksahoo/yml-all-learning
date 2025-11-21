@@ -1,0 +1,93 @@
+#List 
+student: !!seq
+  - marks
+  - height
+  - weight
+  - age
+
+
+student: [marks, height, weight, age]  
+
+# Sometime some of the keys of the seq can be empty this is called sparse seq
+sparse_seq: !!seq
+  - marks
+  - 
+  - weight
+  -
+
+
+#Nested Sequesce
+- 
+ - mango
+ - banana
+ - apple
+- 
+ - kol
+ - delhi
+ - mumbai
+    
+
+# Key value pairs are called maps 
+!!map
+
+
+#nested maps (maps within a map)
+name : !!map sagnik
+details :
+  age : 25
+  height : 5.9
+  weight : 70
+
+#same as 
+name : sagnik
+details: { age: 25, height: 5.9, weight: 70 }
+
+#pairs : key may have dublicate values
+# !!pairs
+
+pair_emaple: !! pairs
+   - job: developer
+   - job: manager
+#this will be a hash table containing arrays
+
+#same as
+pair_emaple: !! pairs [job: developer, job: manager]
+
+
+#Set will have unique values only
+# !!set
+
+names: !!set 
+  ? sagnik
+  ? ankit
+  ? rahul
+  ? sagnik  #(this will be ignored as set will have unique values only)
+
+
+#distionary 
+#!!omap
+
+people: !!omap
+  - sagbik:
+     - name: sagnik
+     - age: 25
+     - city: kolkata
+  - ankit:
+     - name: ankit
+     - age: 27
+     - city: delhi
+   
+
+#reusing some properties use anchors 
+LikingOfaPerson: &base
+    fav_color: blue
+    fav_food: pasta
+    dislikes: spicy food
+
+person1:
+   name: sagnik    
+   <<: *base
+
+person2:
+   name: Priyanka  
+   <<: *base  

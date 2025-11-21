@@ -1,0 +1,36 @@
+#reusing some properties use anchors 
+LikingOfaPerson: &base
+    fav_color: blue
+    fav_food: pasta
+    dislikes: spicy food
+
+person1:
+   name: sagnik    
+   <<: *base
+
+person2:
+   name: Priyanka  
+   <<: *base  
+
+
+##JSON WILL BE LIKE
+
+{
+  "LikingOfaPerson": {
+    "fav_color": "blue",
+    "fav_food": "pasta",
+    "dislikes": "spicy food"
+  },
+  "person1": {
+    "name": "sagnik",
+    "fav_color": "blue",
+    "fav_food": "pasta",
+    "dislikes": "spicy food"
+  },
+  "person2": {
+    "name": "Priyanka",
+    "fav_color": "blue",
+    "fav_food": "pasta",
+    "dislikes": "spicy food"
+  }
+}

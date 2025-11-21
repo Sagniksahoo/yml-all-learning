@@ -1,0 +1,40 @@
+#Key Value Pairs in YAML
+#Ymal is a 0 or more collections of documents which are separated by '---'
+
+---
+"apple" : " I am a red fruit. "
+1 : "This is my roll no in class 10"
+
+---
+# lists
+- apple
+- banana
+- mango
+# Remember yml is a case sensitive language.
+- Apple #(so this is different from apple)
+
+# Block Types
+---
+cities:
+  - Kolkata
+  - bhubaneswar
+  - delhi
+  - Mumbai
+
+cities: (Wrong Way)
+  - Kolkata
+    - bhubaneswar (This will give error as nested lists are not allowed this way)
+  - delhi
+  - Mumbai
+
+cities : [Kolkata, bhubaneswar, delhi, Mumbai] 
+---
+
+{mango: "yello", apple: "red"}
+... # End of Document
+
+(To show end of document explicitly)
+
+
+
+####Remember: Ymal does not provide multi line commands like json. Each key value pair should be in a new line.

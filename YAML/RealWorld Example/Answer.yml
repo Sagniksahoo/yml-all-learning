@@ -1,0 +1,16 @@
+school:
+   - name: 'ABC High School' #(here - this represents the entry in a list)
+     principal : 'someone'
+     Students:
+        - roll_no: 1 #(here - this represents the entry in a list)
+          name: 'Sagnik Sahoo'
+          marks: 95
+        - roll_no: 2
+          name: 'Priyanka Das'
+          marks: 98
+        - roll_no: 3
+          name: 'Rohit Sharma'
+          marks: 89
+        - roll_no: 4
+          name: 'Anjali Verma'
+          marks: 92

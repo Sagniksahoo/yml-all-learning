@@ -1,0 +1,59 @@
+myname : sagnik (This is known as variable here. A variable can be any datatype)
+
+#String variable
+mycity : "Kolkata"  #(String value should be in double quotes or single quotes)
+mycountry : 'India'  #(String value should be in double quotes or single quotes)
+
+bio : Hello my name is Sagnik Sahoo. 
+I live in Kolkata. (Wrong way of writing multi line string in yml will give error)
+
+
+bio : |
+  Hello my name is Sagnik Sahoo. 
+  I live in Kolkata.  #(Correct way of writing multi line string in yml)
+
+
+# Write a single message/line in multiple lines
+
+message : >
+  Hello my name 
+  is Sagnik Sahoo. 
+  I live 
+  in Kolkata.  #(This will be treated as single line string)
+
+# Integer variable
+
+number_of_apples : 10
+number_of_bananas : 20
+
+# Float variable
+marks : 89.5
+height_in_meters : 5.9
+
+# Boolean variable
+booleanvalue: No # n,N, no, NO, False, FALSE, false
+( This will be treated as False)
+booleanvalue2: true # y,Y, yes, YES, True, TRUE, true
+( This will be treated as True)
+
+#Specify the type (We can explicitly specify the type of variable using !!type)
+zero: !!int 0
+positiveNumber: !!int 25
+nagativeNumber: !!int -25
+
+binaryNum: !!int 0b1010  #(Binary representation of 10)
+octalNum: !!int 0o12     #(Octal representation of 10)
+hexadecimalNum: !!int 0xA  #(Hexadecimal representation of 10)
+commaValue: !!int +5400_00 #(Underscore is allowed in numbers for better readability)
+
+
+#Floating point numbers
+floatNum1: !!float 3.1416
+floatNum2: !!float -0.01
+
+#infinite  value
+infinityValue: !!float .inf
+
+
+#Special Values
+not a num: .nan
